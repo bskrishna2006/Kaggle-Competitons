@@ -1,0 +1,27 @@
+{
+  "enabled": true,
+  "name": "Web Error Auto-Fixer",
+  "description": "Monitors web application files for errors and attempts to fix them while preserving the original logic and functionality",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "*.py",
+      "*.js",
+      "*.html",
+      "*.css",
+      "*.jsx",
+      "*.ts",
+      "*.tsx",
+      "*.vue",
+      "*.php",
+      "*.rb",
+      "*.go",
+      "*.java"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A web application file has been modified. Please analyze the code for any errors, bugs, or issues that could cause runtime problems. If you find any errors, fix them while strictly preserving the core business logic and functionality. Focus on syntax errors, import issues, variable naming problems, type errors, and other technical issues that don't affect the intended behavior of the application."
+  }
+}
